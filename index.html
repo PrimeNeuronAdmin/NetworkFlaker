@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network Flaker</title>
+<meta name="description" content="Simulate flaky, dropping or slow networks on Android to test how your apps really cope.">
+<style>
+  :root { --brand: #5B3FA5; --text: #1c1b1f; --muted: #5f5b66; --bg: #fff; --card: #f5f2fb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --text: #ece8f4; --muted: #b3adbf; --bg: #141218; --card: #211d29; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--bg); }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 16px 40px; }
+  .hero { display: flex; align-items: center; gap: 20px; }
+  .hero svg { flex: none; width: 88px; height: 88px; border-radius: 22px; }
+  h1 { margin: 0; font-size: 2.2em; line-height: 1.1; }
+  .tagline { margin: 6px 0 0; color: var(--muted); font-size: 1.1em; }
+  h2 { margin-top: 2.2em; font-size: 1.25em; }
+  ul { padding-left: 1.2em; }
+  li { margin: 6px 0; }
+  .card { background: var(--card); border-radius: 16px; padding: 18px 20px; margin-top: 2em; }
+  a { color: var(--brand); font-weight: 600; }
+  @media (prefers-color-scheme: dark) { a { color: #b9a4f5; } }
+  footer { margin-top: 3em; color: var(--muted); font-size: .9em; }
+</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <svg viewBox="10 10 88 88" aria-hidden="true">
+      <rect x="10" y="10" width="88" height="88" fill="#5B3FA5"/>
+      <path fill="#fff" d="M38,70h8v-12h-8z"/><path fill="#fff" d="M52,70h8v-20h-8z"/>
+      <path fill="#fff" d="M66,70h8v-28h-8z"/><path fill="#fff" d="M33,41l4,-4l42,42l-4,4z"/>
+    </svg>
+    <div>
+      <h1>Network Flaker</h1>
+      <p class="tagline">Test your apps on dropping, flaky and slow connections.</p>
+    </div>
+  </div>
+
+  <p>Network Flaker is an Android tool for developers and testers. It makes the whole device's
+  connection unreliable on purpose, so you can see how your apps behave on real-world networks.
+  No root is needed, and the connection is restored the moment you stop.</p>
+
+  <h2>Modes</h2>
+  <ul>
+    <li><strong>Periodic:</strong> down for X seconds, up for Y seconds, on repeat.</li>
+    <li><strong>Random:</strong> drop the connection with a chosen probability on every tick.</li>
+    <li><strong>Throttle (Pro):</strong> keep the connection working but slow, with a speed cap and added latency.</li>
+  </ul>
+
+  <div class="card">
+    <strong>Private by design.</strong> Network Flaker uses Android's VPN service only to create a
+    local tunnel on your device. Your traffic is never sent to a server, logged or collected.
+    <br><a href="privacy-policy.html">Read the privacy policy</a>
+  </div>
+
+  <h2>Contact</h2>
+  <p>Questions or feedback: <a href="mailto:prime.neuron.86@gmail.com">prime.neuron.86@gmail.com</a></p>
+
+  <footer>Designed &amp; developed by PrimeNeuron</footer>
+</main>
+</body>
+</html>
